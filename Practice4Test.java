@@ -26,6 +26,8 @@ public class Practice4Test {
 	
 	public boolean isPalindrome(String item) {
 		clearData();
+		// changes the string to lower case and removes all spaces and non alpha characters
+		item = item.toLowerCase().replaceAll("[^a-z]|\\s+","");
 		for (int i = 0; i < item.length(); i++) {
 			stack.push(item.substring(i, i+1));
 			queue.enqueue(item.substring(i, i+1));
